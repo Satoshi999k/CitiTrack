@@ -2,8 +2,10 @@
   background: #1B6B6B;
   padding: 0.4.5rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 
@@ -88,6 +90,30 @@
 .nav-auth {
   display: flex;
   gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle-nav {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.theme-toggle-nav:active {
+  transform: scale(0.95);
 }
 
 .btn-login,

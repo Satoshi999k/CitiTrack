@@ -170,7 +170,63 @@
   background: #94a3b8;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Dark Mode Styles */
+.App.dark-mode .terms-modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.App.dark-mode .terms-modal-content {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .terms-close-btn {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.App.dark-mode .terms-close-btn:hover {
+  background: #4b5563;
+  color: #4db5a1;
+}
+
+.App.dark-mode .terms-modal-content h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .terms-body h3 {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .terms-body p,
+.App.dark-mode .terms-body li {
+  color: #d1d5db;
+}
+
+.App.dark-mode .terms-actions {
+  border-top-color: #374151;
+}
+
+.App.dark-mode .terms-btn-close {
+  background: #4db5a1;
+  color: white;
+}
+
+.App.dark-mode .terms-btn-close:hover {
+  background: #2b7a78;
+}
+
+.App.dark-mode .terms-modal-content::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.App.dark-mode .terms-modal-content::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.App.dark-mode .terms-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
 @media (max-width: 768px) {
   .terms-modal-content {
     padding: 2rem;

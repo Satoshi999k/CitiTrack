@@ -171,3 +171,17 @@
   animation: fadeInOut 1.5s ease-in-out infinite;
   letter-spacing: 1px;
 }
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Dark Mode Styles */
+.App.dark-mode .loading-container {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 50%, #111827 100%);
+}

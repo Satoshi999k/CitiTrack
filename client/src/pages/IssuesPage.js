@@ -6,6 +6,9 @@ import {
   Lightbulb as LightbulbIcon,
   WaterDrop as WaterDropIcon,
   LocationCity as LocationCityIcon,
+  Facebook as FacebookIcon,
+  Twitter as TwitterIcon,
+  Instagram as InstagramIcon,
 } from '@mui/icons-material';
 import './IssuesPage.css';
 
@@ -228,6 +231,51 @@ function IssuesPage() {
           ))}
         </div>
       </div>
+      
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h4>About CitiTrack</h4>
+            <p>
+              CitiTrack is a smart platform designed to connect citizens and
+              authorities for efficient infrastructure management.
+            </p>
+          </div>
+          <div className="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/report">Report Issue</a></li>
+              <li><a href="/issues">View Issues</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Contact Info</h4>
+            <p>Email: info@cititrack.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: Mati City, Philippines</p>
+          </div>
+          <div className="footer-section">
+            <h4>Follow Us</h4>
+            <div className="social-links">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="Follow us on Facebook">
+                <FacebookIcon style={{ fontSize: '1.8rem' }} />
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="Follow us on Twitter">
+                <TwitterIcon style={{ fontSize: '1.8rem' }} />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon" title="Follow us on Instagram">
+                <InstagramIcon style={{ fontSize: '1.8rem' }} />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2026 CitiTrack. All rights reserved.</p>
+        </div>
+      </footer>
       </div>
     </div>
   );

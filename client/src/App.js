@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import ChatBot from './components/ChatBot';
 import Loading from './components/Loading';
@@ -10,13 +10,27 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
+import AdminDashboard from './pages/AdminDashboard';
 import './App.css';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('clientTheme');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+  const isAdminPage = location.pathname.startsWith('/admin');
 
   useEffect(() => {
-    // Simulate loading time (2 seconds)
+    localStorage.setItem('clientTheme', JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -25,25 +39,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        {isLoading && <Loading />}
-        <Navigation />
-        <ChatBot />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/report" element={<ReportIssuePage />} />
-            <Route path="/issues" element={<IssuesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      {isLoading && <Loading />}
+      {!isAdminPage && <Navigation isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
+      {!isAdminPage && <ChatBot />}
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/report" element={<ReportIssuePage />} />
+          <Route path="/issues" element={<IssuesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
 export default App;

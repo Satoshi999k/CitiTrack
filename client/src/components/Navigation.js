@@ -6,10 +6,12 @@ import {
   Visibility as VisibilityIcon,
   Info as InfoIcon,
   ContactMail as ContactMailIcon,
+  DarkMode,
+  Brightness7,
 } from '@mui/icons-material';
 import './Navigation.css';
 
-function Navigation() {
+function Navigation({ isDarkMode, toggleTheme }) {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path ? 'active' : '';
@@ -61,6 +63,9 @@ function Navigation() {
         </ul>
 
         <div className="nav-auth">
+          <button className="theme-toggle-nav" onClick={toggleTheme} title={isDarkMode ? 'Light Mode' : 'Dark Mode'}>
+            {isDarkMode ? <Brightness7 /> : <DarkMode />}
+          </button>
           <Link to="/login" className="btn-login">Login</Link>
           <Link to="/signup" className="btn-signup">Sign Up</Link>
         </div>

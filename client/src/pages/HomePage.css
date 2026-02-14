@@ -608,6 +608,211 @@
   background: linear-gradient(135deg, #f5f7f6 0%, #eef3f2 100%);
 }
 
+/* Dark Mode Styles */
+.App.dark-mode .hero {
+  background: linear-gradient(135deg, rgba(75, 181, 161, 0.85) 0%, rgba(43, 122, 120, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop') center/cover;
+  background-blend-mode: overlay;
+}
+
+.App.dark-mode .hero-text h1,
+.App.dark-mode .hero-text p {
+  color: #ffffff;
+}
+
+.App.dark-mode .stats {
+  background: #1f2937;
+}
+
+.App.dark-mode .stat-card {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .stat-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.App.dark-mode .stat-number,
+.App.dark-mode .stat-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .stat-label {
+  color: #d1d5db;
+}
+
+.App.dark-mode .how-it-works {
+  background: #111827;
+}
+
+.App.dark-mode .workflow-text h2 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .workflow-item-content h3 {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .workflow-item-content p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .workflow-item-number {
+  background: #4db5a1;
+}
+
+.App.dark-mode .workflow-svg .bg-number {
+  fill: rgba(77, 181, 161, 0.1);
+}
+
+.App.dark-mode .features {
+  background: #111827;
+}
+
+.App.dark-mode .features h2 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .features h2::after {
+  background: #4db5a1;
+}
+
+.App.dark-mode .feature-card {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .feature-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.App.dark-mode .feature-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .feature-card h3 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .feature-card p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .categories {
+  background: #1f2937;
+}
+
+.App.dark-mode .categories h2 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .categories h2::after {
+  background: #4db5a1;
+}
+
+.App.dark-mode .category-item {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .category-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.App.dark-mode .category-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .category-item h3 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .category-item p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .cta-section {
+  background-color: #4db5a1;
+}
+
+.App.dark-mode .get-in-touch {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.App.dark-mode .get-in-touch h2 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .section-subtitle {
+  color: #d1d5db;
+}
+
+.App.dark-mode .contact-info-box {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .contact-box-title {
+  color: #4db5a1;
+}
+
+.App.dark-mode .contact-item {
+  border-bottom-color: #4b5563;
+}
+
+.App.dark-mode .contact-item-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .contact-item-details h4 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .contact-item-details p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .contact-item-subtext {
+  color: #9ca3af;
+}
+
+.App.dark-mode .contact-form-wrapper {
+  background: #374151;
+}
+
+.App.dark-mode .form-input {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.App.dark-mode .form-input:focus {
+  border-color: #4db5a1;
+  box-shadow: 0 0 0 3px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .footer {
+  background: #111827;
+}
+
+.App.dark-mode .footer-content {
+  border-bottom-color: #374151;
+}
+
+.App.dark-mode .footer-section a {
+  color: #d1d5db;
+}
+
+.App.dark-mode .footer-section a:hover {
+  color: #4db5a1;
+}
+
+.App.dark-mode .footer-bottom {
+  border-top-color: #374151;
+  color: #9ca3af;
+}
+
 .get-in-touch-heading {
   opacity: 0;
   transform: translateY(30px);

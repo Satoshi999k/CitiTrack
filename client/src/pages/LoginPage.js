@@ -87,7 +87,15 @@ function LoginPage() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('authToken', data.token);
-        navigate('/');
+        localStorage.setItem('userRole', data.user.role);
+        localStorage.setItem('username', data.user.name);
+        
+        // Redirect to admin dashboard if admin role
+        if (data.user.role === 'admin') {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
       } else {
         setErrors({ submit: 'Invalid email or password' });
       }

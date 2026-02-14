@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const User = require('./models/User');
 
 dotenv.config();
 
@@ -18,8 +19,31 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('MongoDB connected'))
+  .then(() => {
+    console.log('MongoDB connected');
+    // Create default admin account
+    createDefaultAdmin();
+  })
   .catch((err) => console.log('MongoDB connection warning (proceeding without database):', err.message));
+
+// Create default admin account on startup
+async function createDefaultAdmin() {
+  try {
+    const adminExists = await User.findOne({ email: 'admin@cititrack.com' });
+    if (!adminExists) {
+      const admin = new User({
+        name: 'Admin User',
+        email: 'admin@cititrack.com',
+        password: 'Admin@123',
+        role: 'admin',
+      });
+      await admin.save();
+      console.log('✓ Default admin account created: admin@cititrack.com / Admin@123');
+    }
+  } catch (error) {
+    console.log('Admin account check:', error.message);
+  }
+}
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -27,7 +51,9 @@ app.get('/api/health', (req, res) => {
 });
 
 // Routes
+app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/chatbot', require('./routes/chatbotRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 // TODO: Add routes here
 // app.use('/api/issues', require('./routes/issueRoutes'));
 // app.use('/api/users', require('./routes/userRoutes'));

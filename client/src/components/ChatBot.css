@@ -341,6 +341,86 @@
   cursor: not-allowed;
 }
 
+/* Dark Mode Styles */
+.App.dark-mode .chatbot-container {
+  background: #1f2937;
+}
+
+.App.dark-mode .chatbot-messages {
+  background: #111827;
+}
+
+.App.dark-mode .chatbot-messages::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.App.dark-mode .bot-message .message-content {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.App.dark-mode .bot-avatar-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .typing-indicator span {
+  background: #4db5a1;
+}
+
+.App.dark-mode .chatbot-input-container {
+  background: #1f2937;
+  border-top-color: #374151;
+}
+
+.App.dark-mode .chatbot-input {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.App.dark-mode .chatbot-input:focus {
+  border-color: #4db5a1;
+  box-shadow: 0 0 0 3px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .chatbot-input::placeholder {
+  color: #9ca3af;
+}
+
+.App.dark-mode .chatbot-input:disabled {
+  background-color: #374151;
+  color: #9ca3af;
+}
+
+.App.dark-mode .chatbot-send-btn {
+  background: #4db5a1;
+}
+
+.App.dark-mode .chatbot-send-btn:hover:not(:disabled) {
+  background: #2b7a78;
+}
+
+.App.dark-mode .chatbot-send-btn:disabled {
+  background: #6b7280;
+}
+
+.App.dark-mode .suggestions-label {
+  color: #9ca3af;
+}
+
+.App.dark-mode .suggestion-btn {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.App.dark-mode .suggestion-btn:hover:not(:disabled) {
+  border-color: #4db5a1;
+  background: #4b5563;
+  color: #4db5a1;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .chatbot-container {

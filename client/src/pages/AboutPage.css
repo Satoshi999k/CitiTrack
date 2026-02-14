@@ -503,7 +503,134 @@
   font-size: 0.95rem;
 }
 
-/* Responsive */
+/* Dark Mode Styles */
+.App.dark-mode .about-hero {
+  background: linear-gradient(135deg, rgba(75, 181, 161, 0.85) 0%, rgba(43, 122, 120, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+  background-blend-mode: overlay;
+}
+
+.App.dark-mode .about-background {
+  background: #1f2937;
+}
+
+.App.dark-mode .about-container h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .background-content p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .mission-vision {
+  background: #111827;
+}
+
+.App.dark-mode .mission-card,
+.App.dark-mode .vision-card {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 100%);
+  box-shadow: 0 8px 20px rgba(77, 181, 161, 0.15);
+}
+
+.App.dark-mode .core-values {
+  background: #1f2937;
+}
+
+.App.dark-mode .core-values h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .value-card {
+  background: #374151;
+  color: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .value-card:hover {
+  box-shadow: 0 8px 25px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .value-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .value-card h3 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .value-card p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .about-features {
+  background: #111827;
+}
+
+.App.dark-mode .about-features h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .feature-item {
+  background: #374151;
+  border-left-color: #4db5a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .feature-number {
+  background: #4db5a1;
+  color: white;
+}
+
+.App.dark-mode .feature-item h3 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .feature-item p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .about-impact {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 100%);
+}
+
+.App.dark-mode .impact-container h2 {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .impact-stat {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.App.dark-mode .impact-stat h3 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .impact-stat p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .impact-icon {
+  background: linear-gradient(135deg, rgba(77, 181, 161, 0.2) 0%, rgba(43, 122, 120, 0.2) 100%);
+  color: #4db5a1;
+}
+
+.App.dark-mode .impact-stat:hover .impact-icon {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 100%);
+  color: white;
+}
+
+.App.dark-mode .about-cta {
+  background: #1f2937;
+}
+
+.App.dark-mode .cta-content h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .cta-content p {
+  color: #d1d5db;
+}
 @media (max-width: 768px) {
   .about-hero h1 {
     font-size: 2.5rem;

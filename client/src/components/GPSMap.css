@@ -139,6 +139,54 @@
   text-align: center;
 }
 
+/* Dark Mode Styles */
+.App.dark-mode .gps-map-container {
+  background: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .gps-map-header h3 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .btn-current-location {
+  background: #4db5a1;
+}
+
+.App.dark-mode .btn-current-location:hover:not(:disabled) {
+  background: #2b7a78;
+}
+
+.App.dark-mode .gps-map-wrapper {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .gps-info {
+  background: #374151;
+}
+
+.App.dark-mode .coord-pair {
+  background: #4b5563;
+  border-left-color: #4db5a1;
+}
+
+.App.dark-mode .coord-pair label {
+  color: #4db5a1;
+}
+
+.App.dark-mode .coord-pair span {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .gps-address {
+  background: rgba(77, 181, 161, 0.1);
+  color: #4db5a1;
+}
+
+.App.dark-mode .gps-hint {
+  color: #d1d5db;
+}
+
 @media (max-width: 768px) {
   .gps-map-header {
     flex-direction: column;

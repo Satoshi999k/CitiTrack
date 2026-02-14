@@ -1,7 +1,10 @@
 .issues-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .issues-container {
@@ -167,6 +170,75 @@
   box-shadow: 0 4px 12px rgba(43, 122, 120, 0.4);
 }
 
+/* Dark Mode Styles */
+.App.dark-mode .issues-page {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.App.dark-mode .issues-container h1 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .issues-container > p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .filter-btn {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.App.dark-mode .filter-btn:hover {
+  border-color: #4db5a1;
+  color: #4db5a1;
+}
+
+.App.dark-mode .filter-btn.active {
+  background: #4db5a1;
+  color: white;
+  border-color: transparent;
+}
+
+.App.dark-mode .issue-card {
+  background: #374151;
+  color: #f3f4f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .issue-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.App.dark-mode .issue-image {
+  background: #1f2937;
+  color: #4db5a1;
+}
+
+.App.dark-mode .issue-card h3 {
+  color: #f9fafb;
+}
+
+.App.dark-mode .issue-location {
+  color: #d1d5db;
+}
+
+.App.dark-mode .issue-category {
+  color: #9ca3af;
+}
+
+.App.dark-mode .issue-footer {
+  color: #9ca3af;
+}
+
+.App.dark-mode .btn-view {
+  background: #4db5a1;
+}
+
+.App.dark-mode .btn-view:hover {
+  box-shadow: 0 4px 12px rgba(77, 181, 161, 0.4);
+}
+
 @media (max-width: 600px) {
   .issues-container h1 {
     font-size: 1.8rem;
@@ -184,4 +256,107 @@
   .issues-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 4rem 2rem 2rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #2D9B6E;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2D9B6E;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #1B6B6B;
+  transform: translateY(-3px) scale(1.15);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 2rem;
+  text-align: center;
+  color: #999;
+  margin: 0;
+}
+
+/* Dark Mode Footer */
+.App.dark-mode .footer {
+  background: #111827;
+}
+
+.App.dark-mode .footer-section a {
+  color: #d1d5db;
+}
+
+.App.dark-mode .footer-section a:hover {
+  color: #4db5a1;
+}
+
+.App.dark-mode .social-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .social-icon:hover {
+  color: #2b7a78;
+}
+
+.App.dark-mode .footer-bottom {
+  border-top-color: #374151;
+  color: #9ca3af;
 }

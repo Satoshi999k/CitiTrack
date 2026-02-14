@@ -7,7 +7,7 @@ import {
 import './ChatBot.css';
 
 function ChatBot() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,

@@ -459,7 +459,151 @@
   font-size: 0.95rem;
 }
 
-/* Responsive */
+/* Dark Mode Styles */
+.App.dark-mode .contact-hero {
+  background: linear-gradient(135deg, rgba(75, 181, 161, 0.85) 0%, rgba(43, 122, 120, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+  background-blend-mode: overlay;
+}
+
+.App.dark-mode .contact-info-section {
+  background: #1f2937;
+}
+
+.App.dark-mode .contact-info-section h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .info-card {
+  background: #374151;
+  color: #f3f4f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .info-card:hover {
+  box-shadow: 0 12px 30px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .info-card h3 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .info-card p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .info-link {
+  color: #4db5a1;
+  border-bottom-color: #4db5a1;
+}
+
+.App.dark-mode .info-link:hover {
+  color: #2b7a78;
+  border-bottom-color: #2b7a78;
+}
+
+.App.dark-mode .contact-form-section {
+  background: #111827;
+}
+
+.App.dark-mode .contact-form-section h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .form-content > p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .success-message {
+  background: #064e3b;
+  border-color: #047857;
+  color: #a7f3d0;
+}
+
+.App.dark-mode .form-group label {
+  color: #4db5a1;
+}
+
+.App.dark-mode .form-group input,
+.App.dark-mode .form-group textarea {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.App.dark-mode .form-group input::placeholder,
+.App.dark-mode .form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.App.dark-mode .form-group input:focus,
+.App.dark-mode .form-group textarea:focus {
+  border-color: #4db5a1;
+  box-shadow: 0 0 0 3px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .submit-btn {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 100%);
+}
+
+.App.dark-mode .submit-btn:hover {
+  box-shadow: 0 10px 25px rgba(77, 181, 161, 0.3);
+}
+
+.App.dark-mode .contact-benefits h3 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .benefits-list li {
+  color: #d1d5db;
+}
+
+.App.dark-mode .benefit-icon {
+  color: #4db5a1;
+}
+
+.App.dark-mode .contact-faq {
+  background: #1f2937;
+}
+
+.App.dark-mode .contact-faq h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .faq-item {
+  background: #374151;
+  color: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark-mode .faq-item:hover {
+  box-shadow: 0 8px 20px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .faq-item h3 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .faq-item p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .footer {
+  background: #111827;
+}
+
+.App.dark-mode .footer-section a {
+  color: #d1d5db;
+}
+
+.App.dark-mode .footer-section a:hover {
+  color: #4db5a1;
+}
+
+.App.dark-mode .footer-bottom {
+  border-top-color: #374151;
+  color: #9ca3af;
+}
 @media (max-width: 768px) {
   .contact-hero h1 {
     font-size: 2.5rem;

@@ -8,7 +8,8 @@
   font-family: 'Roboto', sans-serif;
   position: relative;
   overflow: hidden;
-  padding: 2rem 1rem;
+  padding: 2.5rem;
+  margin-top: -80px;
 }
 
 /* Background Gradient */
@@ -525,7 +526,133 @@
   font-weight: 700;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* Dark Mode Styles */
+.App.dark-mode .login-page {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%);
+}
+
+.App.dark-mode .login-bg {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%);
+}
+
+.App.dark-mode .form-card {
+  background: #1f2937;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+}
+
+.App.dark-mode .form-header h2 {
+  color: #4db5a1;
+}
+
+.App.dark-mode .form-header p {
+  color: #d1d5db;
+}
+
+.App.dark-mode .error-alert {
+  background: #7f1d1d;
+  border-left-color: #dc2626;
+  color: #fecaca;
+}
+
+.App.dark-mode .input-group label {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .input-field {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.App.dark-mode .input-field:focus-within {
+  background: #4b5563;
+  border-color: #4db5a1;
+  box-shadow: 0 0 0 3px rgba(77, 181, 161, 0.2);
+}
+
+.App.dark-mode .input-icon {
+  color: #9ca3af;
+}
+
+.App.dark-mode .input-field input {
+  color: #f3f4f6;
+}
+
+.App.dark-mode .input-field input::placeholder {
+  color: #6b7280;
+}
+
+.App.dark-mode .toggle-password {
+  color: #9ca3af;
+}
+
+.App.dark-mode .toggle-password:hover {
+  color: #4db5a1;
+}
+
+.App.dark-mode .remember-me {
+  color: #d1d5db;
+}
+
+.App.dark-mode .remember-me input[type='checkbox'] {
+  accent-color: #4db5a1;
+}
+
+.App.dark-mode .forgot-link {
+  color: #4db5a1;
+}
+
+.App.dark-mode .forgot-link:hover {
+  color: #2b7a78;
+}
+
+.App.dark-mode .btn-submit {
+  background: linear-gradient(135deg, #4db5a1 0%, #2b7a78 100%);
+}
+
+.App.dark-mode .btn-submit:hover:not(:disabled) {
+  box-shadow: 0 10px 25px rgba(77, 181, 161, 0.3);
+}
+
+.App.dark-mode .form-footer {
+  color: #d1d5db;
+}
+
+.App.dark-mode .form-footer a {
+  color: #4db5a1;
+}
+
+.App.dark-mode .form-footer a:hover {
+  color: #2b7a78;
+}
+
+.App.dark-mode .divider {
+  color: #6b7280;
+}
+
+.App.dark-mode .divider::before,
+.App.dark-mode .divider::after {
+  background: #4b5563;
+}
+
+.App.dark-mode .divider span {
+  color: #9ca3af;
+}
+
+.App.dark-mode .social-btn-google {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.App.dark-mode .social-btn-google:hover {
+  background: #4b5563;
+  border-color: #4db5a1;
+  color: #4db5a1;
+}
+
+.App.dark-mode .error-text {
+  color: #f87171;
+}
 @media (max-width: 1024px) {
   .login-main-container {
     grid-template-columns: 1fr;
